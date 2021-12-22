@@ -10,21 +10,27 @@
     <pre>
         <?php
             require_once("php_poo-6.php");
+            require_once("php_poo_atribuicao-6.php");
             $c1= new lutador("william","Brasil",20,1.73,64.50,"leve",99,1,0);
-            $c1->Apresentar();
-            $c1->Status();
-            $c1->Perderluta();
+            //$c1->Apresentar();
+            //$c1->Status();
+            //$c1->Perderluta();
             $c2= new lutador("wagner","Brasil",20,1.90,74.50,"leve",100,0,0);
-            $c2->Apresentar();
-            $c2->Status();
-            $c2->Ganharluta();
+           // $c2->Apresentar();
+           // $c2->Status();
+           // $c2->Ganharluta();
             $c3= new lutador("Ewerton","Brasil",20,1.60,50.03,"leve",30,50,20);
-            $c3->Apresentar();
-            $c3->Status();
-            $c3->Empatar();
-            print_r($c1);
+            //$c3->Apresentar();
+           //$c3->Status();
+           // $c3->Empatar();
+           /* print_r($c1);
             print_r($c2);
-            print_r($c3);
+            print_r($c3);*/
+
+            $luta = new luta();
+            $luta->MarcarLuta($c1,$c2);
+            $luta->luta();
+            print_r($luta);
         ?>
     </pre>
 </body>
